@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+void BubbleSort(int arr[],int n){
+
+    while(n-->0)    //在本例中，第1次执行while时，n的值为9，即（n-1）
+    for(int i=0;i<n;i++){
+        //如果当前元素比后面相邻的元素大，则交换相邻元素数值
+        if(arr[i]>arr[i+1])
+            swap(arr[i],arr[i+1]);
+
+    }
+}
+
+int main(){
+
+    int a[10]={10,9,8,7,6,5,4,3,2,1};
+    BubbleSort(a,10);
+    for(int i=0;i<10;i++){
+        cout<<a[i]<<" ";
+    }
+    cout<<endl;
+    return 0;
+}
